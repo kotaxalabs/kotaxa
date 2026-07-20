@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root{
+
+  --background:#09090B;
+  --surface:#111827;
+
+  --primary:#7C3AED;
+  --secondary:#06B6D4;
+
+  --text:#FAFAFA;
+  --muted:#A1A1AA;
+
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+
+  background:var(--background);
+  color:var(--text);
+
+  font-family:Inter,sans-serif;
+
+  min-height:100vh;
+
+}
