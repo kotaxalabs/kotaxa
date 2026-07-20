@@ -14,7 +14,7 @@ import { projectAtlas } from "@/content/projects/project-atlas";
 const projects = [projectAtlas];
 
 
-};
+
 
 export default function ProjectsPage() {
   return (
