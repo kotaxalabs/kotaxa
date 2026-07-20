@@ -5,15 +5,7 @@ import Container from "@/components/layout/Container";
 import Badge from "@/components/ui/Badge";
 import Button from "@/components/ui/Button";
 
-import { aiVsTraditionalDevelopment } from "@/content/insights/ai-vs-traditional-development";
-import { futureOfRobotics } from "@/content/insights/future-of-robotics";
-import { softwareEngineeringRoadmap } from "@/content/insights/software-engineering-roadmap";
-
-const article = [
-  aiVsTraditionalDevelopment,
-  futureOfRobotics,
-  softwareEngineeringRoadmap,
-];
+import { getInsight } from "@/content/insights";
 
 type Props = {
   params: Promise<{
@@ -21,9 +13,11 @@ type Props = {
   }>;
 };
 
-export default async function Page({ params }: Props) {
+export default async function InsightPage({ params }: Props) {
   const { slug } = await params;
-  
+
+  const article = getInsight(slug);
+
   if (!article) {
     notFound();
   }
@@ -48,29 +42,30 @@ export default async function Page({ params }: Props) {
               alt={article.title}
               fill
               className="object-cover"
+              priority
             />
           </div>
 
-          <section className="mt-20">
+          <section className="mt-20 space-y-6">
             <h2 className="text-3xl font-bold">
-              Introduction
+              Overview
             </h2>
 
-            <p className="mt-6 leading-8 text-zinc-400">
-              This article is part of the Kotaxa knowledge base. Every topic is
-              based on practical experience, project development and continuous
-              experimentation.
+            <p className="leading-8 text-zinc-400">
+              This article is part of the Kotaxa knowledge base. Every article
+              is written from real project experience and focuses on practical
+              software engineering, AI and technology.
             </p>
 
-            <p className="mt-6 leading-8 text-zinc-400">
-              In future commits this page will be powered by MDX, allowing rich
-              technical documentation with code blocks, diagrams and embedded
-              media.
+            <p className="leading-8 text-zinc-400">
+              In future versions this content will be loaded from MDX files,
+              allowing syntax highlighting, diagrams, embedded videos and code
+              examples.
             </p>
           </section>
 
           <div className="mt-20">
-            <Button href="/insights">
+            <Button href="/insights" variant="secondary">
               ← Back to Insights
             </Button>
           </div>
