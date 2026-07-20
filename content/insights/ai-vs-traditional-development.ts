@@ -1,19 +1,16 @@
-export const article = {
+export const aiVsTraditionalDevelopment = {
+  slug: "ai-vs-traditional-development",
 
-slug:"ai-vs-traditional-development",
+  title: "AI vs Traditional Development",
 
-title:"AI vs Traditional Development",
+  description:
+    "How AI is transforming modern software engineering and changing the way developers build products.",
 
-description:
-"How AI is changing modern software engineering.",
+  image: "/images/insights/ai-development.webp",
 
-cover:
-"/images/insights/ai-development.webp",
+  category: "Artificial Intelligence",
 
-date:"2026",
+  publishedAt: "July 2026",
 
-category:"Artificial Intelligence",
-
-href:"/insights/ai-vs-traditional-development"
-
-}
+  href: "/insights/ai-vs-traditional-development",
+};
