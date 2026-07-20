@@ -1,3 +1,10 @@
+import { createMetadata } from "@/lib/seo";
+
+export const metadata = createMetadata({
+  title: "Insights",
+  description: "Articles, engineering notes and AI research.",
+  path: "/insights",
+});
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContentCard from "@/components/ui/ContentCard";
