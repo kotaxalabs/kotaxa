@@ -19,10 +19,7 @@ const articles = [
   softwareEngineeringRoadmap,
 ];
 
-export const metadata = {
-  title: "Insights | Kotaxa",
-  description: "Articles, development logs and technology insights.",
-};
+
 
 export default function InsightsPage() {
   return (
