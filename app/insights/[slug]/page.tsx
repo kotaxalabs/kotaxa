@@ -9,7 +9,7 @@ import { aiVsTraditionalDevelopment } from "@/content/insights/ai-vs-traditional
 import { futureOfRobotics } from "@/content/insights/future-of-robotics";
 import { softwareEngineeringRoadmap } from "@/content/insights/software-engineering-roadmap";
 
-const articles = [
+const article = [
   aiVsTraditionalDevelopment,
   futureOfRobotics,
   softwareEngineeringRoadmap,
@@ -24,7 +24,7 @@ type Props = {
 export default async function Page({ params }: Props) {
   const { slug } = await params;
   
-  if (!articles) {
+  if (!article) {
     notFound();
   }
 
