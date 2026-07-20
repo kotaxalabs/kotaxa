@@ -13,9 +13,7 @@ import { projectAtlas } from "@/content/projects/project-atlas";
 
 const projects = [projectAtlas];
 
-export const metadata = {
-  title: "Projects | Kotaxa",
-  description: "Explore all projects built by Kotaxa.",
+
 };
 
 export default function ProjectsPage() {
