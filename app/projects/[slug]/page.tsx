@@ -7,16 +7,17 @@ import Button from "@/components/ui/Button";
 
 import { projectAtlas } from "@/content/projects/project-atlas";
 
-interface Props {
-  params: {
+type Props = {
+  params: Promise<{
     slug: string;
-  };
-}
+  }>;
+};
 
-export default function ProjectPage({ params }: Props) {
-  if (params.slug !== projectAtlas.slug) {
-    notFound();
-  }
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+
+  // ...
+}
 
   return (
     <main>
