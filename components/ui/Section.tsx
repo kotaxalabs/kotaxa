@@ -1,18 +1,18 @@
-import clsx from "clsx";
 import Container from "@/components/layout/Container";
+import Reveal from "./Reveal";
 
-interface SectionProps {
+interface Props {
   children: React.ReactNode;
-  className?: string;
 }
 
 export default function Section({
   children,
-  className,
-}: SectionProps) {
+}: Props) {
   return (
-    <section className={clsx("py-24 lg:py-32", className)}>
-      <Container>{children}</Container>
+    <section className="py-24">
+      <Container>
+        <Reveal>{children}</Reveal>
+      </Container>
     </section>
   );
 }
