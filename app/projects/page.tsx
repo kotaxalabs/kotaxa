@@ -1,31 +1,26 @@
+import ContentCard from "@/components/ui/ContentCard";
+import PageHero from "@/components/ui/PageHero";
+import Section from "@/components/ui/Section";
+
 import { createMetadata } from "@/lib/seo";
+import { projects } from "@/content/projects";
 
 export const metadata = createMetadata({
   title: "Projects",
-  description: "Explore every project developed by Kotaxa.",
+  description: "Explore every project built by Kotaxa.",
   path: "/projects",
 });
-import Section from "@/components/ui/Section";
-import SectionHeading from "@/components/ui/SectionHeading";
-import ContentCard from "@/components/ui/ContentCard";
-
-import { projectAtlas } from "@/content/projects/project-atlas";
-
-const projects = [projectAtlas];
-
-
-
 
 export default function ProjectsPage() {
   return (
     <main>
-      <Section>
-        <SectionHeading
-          eyebrow="Projects"
-          title="Building in Public"
-          description="Every project is documented from the first idea to production."
-        />
+      <PageHero
+        eyebrow="Projects"
+        title="Building in Public"
+        description="Every project is developed openly, documented step by step and shared with the community."
+      />
 
+      <Section>
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
             <ContentCard
