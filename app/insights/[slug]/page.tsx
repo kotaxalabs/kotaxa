@@ -23,8 +23,7 @@ type Props = {
 
 export default async function Page({ params }: Props) {
   const { slug } = await params;
-  // ...
-}
+  
   if (!article) {
     notFound();
   }
