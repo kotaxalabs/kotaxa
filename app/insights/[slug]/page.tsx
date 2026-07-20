@@ -7,13 +7,13 @@ import Button from "@/components/ui/Button";
 
 import { getInsight } from "@/content/insights";
 
-type Props = {
+type PageProps = {
   params: Promise<{
     slug: string;
   }>;
 };
 
-export default async function InsightPage({ params }: Props) {
+export default async function InsightPage({ params }: PageProps) {
   const { slug } = await params;
 
   const article = getInsight(slug);
@@ -41,26 +41,23 @@ export default async function InsightPage({ params }: Props) {
               src={article.image}
               alt={article.title}
               fill
-              className="object-cover"
               priority
+              className="object-cover"
             />
           </div>
 
-          <section className="mt-20 space-y-6">
-            <h2 className="text-3xl font-bold">
-              Overview
-            </h2>
+          <section className="mt-20">
+            <h2 className="text-3xl font-bold">Overview</h2>
 
-            <p className="leading-8 text-zinc-400">
-              This article is part of the Kotaxa knowledge base. Every article
-              is written from real project experience and focuses on practical
-              software engineering, AI and technology.
+            <p className="mt-6 leading-8 text-zinc-400">
+              Every article published on Kotaxa is based on real-world
+              experiments, practical software development and continuous
+              learning.
             </p>
 
-            <p className="leading-8 text-zinc-400">
-              In future versions this content will be loaded from MDX files,
-              allowing syntax highlighting, diagrams, embedded videos and code
-              examples.
+            <p className="mt-6 leading-8 text-zinc-400">
+              In future versions, this page will render MDX content with code
+              blocks, syntax highlighting, diagrams and interactive examples.
             </p>
           </section>
 
