@@ -7,15 +7,16 @@ import Button from "@/components/ui/Button";
 
 import { getCourse } from "@/content/university";
 
-type Props = {
+type PageProps = {
   params: Promise<{
     slug: string;
   }>;
 };
 
-export default async function Page({ params }: Props) {
+export default async function CoursePage({ params }: PageProps) {
   const { slug } = await params;
 
+  const course = getCourse(slug);
 
   if (!course) {
     notFound();
@@ -40,38 +41,35 @@ export default async function Page({ params }: Props) {
               src={course.image}
               alt={course.title}
               fill
+              priority
               className="object-cover"
             />
           </div>
 
           <section className="mt-20">
-            <h2 className="text-3xl font-bold">
-              Course Overview
-            </h2>
+            <h2 className="text-3xl font-bold">Course Overview</h2>
 
             <p className="mt-6 leading-8 text-zinc-400">
-              Every course inside Kotaxa University is built around real
-              projects instead of isolated lessons. You'll learn by designing,
-              building, testing and deploying complete applications.
+              Kotaxa University courses are built around complete projects
+              rather than isolated lessons. Every course emphasizes practical
+              development and production-ready workflows.
             </p>
           </section>
 
           <section className="mt-20">
-            <h2 className="text-3xl font-bold">
-              What You'll Learn
-            </h2>
+            <h2 className="text-3xl font-bold">What You'll Learn</h2>
 
-            <ul className="mt-8 space-y-4 text-zinc-300">
+            <ul className="mt-8 space-y-3 text-zinc-400">
               <li>• Modern development workflow</li>
               <li>• Project architecture</li>
+              <li>• Clean code principles</li>
               <li>• Best practices</li>
-              <li>• Production-ready development</li>
-              <li>• Real-world implementation</li>
+              <li>• Production deployment</li>
             </ul>
           </section>
 
           <div className="mt-20">
-            <Button href="/university">
+            <Button href="/university" variant="secondary">
               ← Back to University
             </Button>
           </div>
