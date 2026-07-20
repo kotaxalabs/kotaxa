@@ -3,6 +3,7 @@ import FeaturedProject from "@/components/home/FeaturedProject";
 import LatestInsights from "@/components/home/LatestInsights";
 import UniversityPreview from "@/components/home/UniversityPreview";
 import RoadmapPreview from "@/components/home/RoadmapPreview";
+import SupportSection from "@/components/home/SupportSection";
 
 export default function HomePage() {
   return (
@@ -12,6 +13,7 @@ export default function HomePage() {
       <LatestInsights />
       <UniversityPreview />
       <RoadmapPreview />
+      <SupportSection />
     </main>
   );
 }
