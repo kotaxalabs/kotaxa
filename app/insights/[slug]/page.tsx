@@ -15,15 +15,16 @@ const articles = [
   softwareEngineeringRoadmap,
 ];
 
-interface Props {
-  params: {
+type Props = {
+  params: Promise<{
     slug: string;
-  };
+  }>;
+};
+
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+  // ...
 }
-
-export default function InsightPage({ params }: Props) {
-  const article = articles.find((item) => item.slug === params.slug);
-
   if (!article) {
     notFound();
   }
