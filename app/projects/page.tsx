@@ -1,3 +1,10 @@
+import { createMetadata } from "@/lib/seo";
+
+export const metadata = createMetadata({
+  title: "Projects",
+  description: "Explore every project developed by Kotaxa.",
+  path: "/projects",
+});
 import Section from "@/components/ui/Section";
 import SectionHeading from "@/components/ui/SectionHeading";
 import ContentCard from "@/components/ui/ContentCard";
