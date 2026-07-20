@@ -7,14 +7,17 @@ import Button from "@/components/ui/Button";
 
 import { getCourse } from "@/content/university";
 
-interface Props {
-  params: {
+type Props = {
+  params: Promise<{
     slug: string;
-  };
-}
+  }>;
+};
 
-export default function CoursePage({ params }: Props) {
-  const course = getCourse(params.slug);
+export default async function Page({ params }: Props) {
+  const { slug } = await params;
+
+  // ...
+}
 
   if (!course) {
     notFound();
