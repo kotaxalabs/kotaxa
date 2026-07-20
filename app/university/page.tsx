@@ -1,26 +1,26 @@
+import ContentCard from "@/components/ui/ContentCard";
+import PageHero from "@/components/ui/PageHero";
+import Section from "@/components/ui/Section";
+
 import { createMetadata } from "@/lib/seo";
+import { courses } from "@/content/university";
 
 export const metadata = createMetadata({
   title: "University",
-  description: "Learn software engineering through real projects.",
+  description: "Learn by building real-world software projects.",
   path: "/university",
 });
-import Section from "@/components/ui/Section";
-import SectionHeading from "@/components/ui/SectionHeading";
-import ContentCard from "@/components/ui/ContentCard";
-
-import { courses } from "@/content/university";
 
 export default function UniversityPage() {
   return (
     <main>
-      <Section>
-        <SectionHeading
-          eyebrow="Kotaxa University"
-          title="Learn by Building"
-          description="Project-based learning paths designed for developers, makers and AI enthusiasts."
-        />
+      <PageHero
+        eyebrow="Kotaxa University"
+        title="Learn by Building"
+        description="Project-based learning paths for software engineering, AI, cybersecurity and robotics."
+      />
 
+      <Section>
         <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {courses.map((course) => (
             <ContentCard
