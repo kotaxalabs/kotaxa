@@ -1,6 +1,6 @@
 import Container from "@/components/layout/Container";
 import { createMetadata } from "@/lib/seo";
-import { roadmap } from "@/content/roadmap";
+import { roadmap } from "@/content/roadmap/roadmap";
 
 export const metadata = createMetadata({
   title: "Roadmap",
@@ -13,7 +13,7 @@ export default function RoadmapPage() {
     <main className="py-24">
       <Container>
         <div className="mx-auto max-w-4xl">
-          <p className="text-sm font-semibold uppercase tracking-widest text-violet-400">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-violet-400">
             Roadmap
           </p>
 
@@ -22,8 +22,8 @@ export default function RoadmapPage() {
           </h1>
 
           <p className="mt-6 text-lg leading-8 text-zinc-400">
-            Follow the public roadmap of Kotaxa and see what has been completed,
-            what is currently in progress, and what comes next.
+            Follow Kotaxa's public roadmap and see what has been completed,
+            what is currently in progress and what is planned next.
           </p>
 
           <div className="mt-16 space-y-8">
@@ -32,9 +32,9 @@ export default function RoadmapPage() {
                 key={`${item.quarter}-${item.title}`}
                 className="rounded-2xl border border-white/10 bg-white/5 p-8"
               >
-                <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between">
+                <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                   <div>
-                    <p className="text-sm font-medium text-violet-400">
+                    <p className="text-sm font-semibold text-violet-400">
                       {item.quarter}
                     </p>
 
