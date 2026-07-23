@@ -3,7 +3,7 @@ import { navigation } from "./navigation";
 
 export default function DesktopNavigation() {
   return (
-    <nav className="hidden lg:flex items-center gap-8">
+    <nav className="flex items-center justify-center gap-8">
       {navigation.map((item) => (
         <Link
           key={item.href}

@@ -6,15 +6,15 @@ import Section from "@/components/ui/Section";
 export default function Hero() {
   return (
     <Section>
-      <div className="mx-auto flex max-w-5xl flex-col items-center text-center">
+      <div className="mx-auto flex max-w-6xl flex-col items-center text-center">
         <p className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-violet-400">
           BUILD • LEARN • SHARE
         </p>
 
-        <h1 className="text-5xl font-black leading-tight md:text-7xl">
+        <h1 className="text-5xl font-black leading-tight md:text-6xl text-center ">
           Building the Future
           <br />
-          One Project at a Time.
+          One Project at a Time
         </h1>
 
         <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-400">
